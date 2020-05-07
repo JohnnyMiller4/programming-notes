@@ -1,0 +1,145 @@
+~*Object-Oriented Programming*~ is a programming style that is intended to make thinking about programming closer
+to thinking about the real world.
+
+-Each object is an independent unit with a *unique identity*, just as objects in the real world are.
+-Objects also have *characteristics*, which are used to describe them.
+-*Attributes* describes the current state of an object.
+-*Behavior* is specific to the object's type.
+
+~*Classes*~ describes what the *object* will be, but is separate from the object itself.
+-You can use the same class to create multiple objects.
+-tl;dr an Object is an instance of a class
+
+~*Methods*~ is a collection of statements that are grouped together
+to perform an operation; they define behavior. 
+
+class MyClass {
+
+  public static void main(String[ ] args) {
+    sayHello();
+  }
+
+  static void sayHello() {
+    System.out.println("Hello World!");
+  }
+}
+// Outputs "Hello World!"
+
+-You can call a method as many times as necessary.
+
+-You can also create a method that takes some data, called *parameters*, along with it when you call it.
+
+class MyClass {
+  public static void main(String[ ] args) {
+    sayHello("David");
+    sayHello("Amy");
+  }
+
+  static void sayHello(String name) {
+    System.out.println("Hello " + name);
+  }
+}
+// Hello David
+// Hello Amy
+
+~*Method Return Types*~
+
+-The *return* keyword can be used in methods to return a value
+
+static *int* sum(int val 1, int val 1){
+	return val1 + val2;
+}
+
+-*int* is the *return type* in the above method.
+
+class MyClass {
+
+ public static void main(String[ ] args) {
+    int x = sum(2, 5);
+    System.out.println(x);
+  }
+}
+static int sum(int val1, int val2) {
+  return val1 + val2;
+}
+// Outputs "7"
+
+-When you do NOT need to return any value from your method,
+use the keyword *void*
+
+~*Creating Classes and Objects*~
+
+-To create a Class, right click on the *src* folder in Eclipse, select *Create->New->Class.*
+Give your class a name, and click *Finish.*
+
+public class Animal {
+
+}
+
+-You can then add *methods* to your new class.
+
+public class Animal {
+	void bark() {
+		System.out.println("Woof-Woof");
+	}
+}
+
+*Creating Objects*
+
+-Head over to *main* and create a new object of your class.
+
+class MyClass {
+	public static void main(String[] args) {
+		//The following creates an object
+		Animal dog = new Animal();
+		dog.bark();
+	}
+}
+//Outputs "Woof-Woof"
+
+-*dog* is an object of type *Animal*, which can call its *bark()* method (dog.bark();).
+
+*Definint Attributes*
+
+-Attributes are basically variables within a class.
+
+public class Vehicle {
+	int maxSpeed;
+	int wheels;
+	String color;
+	double fuelCapacity;
+	
+	void horn() {
+		System.out.println("Beep!");
+	}
+}
+
+-maxSpeed, wheels etc. are the *attributes* of our Vehicle class.
+
+class MyClass {
+    public static void main(String[ ] args) {
+        Vehicle v1 = new Vehicle();
+        Vehicle v2 = new Vehicle();
+        v1.color = "red";
+        v2.horn();
+        System.out.println(v1.color);
+    }
+}
+//Output:
+Beep!
+red
+
+*Access Modifiers* are used to set the level of access.
+-You can use access modifiers for classes, attributes, and methods.
+
+-*public*: the class is accessible by any other class
+-*default*: the class is accessible only by classes in the same package.
+-*protected*: Provides the same access as *default*, with the addition that
+subclasses can access protected methods and variables of the *superclass.*
+*private*: Accessible only within the declared class itself.
+
+-It is best practice to keep the *variables/attributes* within a class *private*.
+The variables are accessible and modified using *Getters and Setters.*
+
+*Getters and Setters*
+

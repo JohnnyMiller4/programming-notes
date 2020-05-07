@@ -1,0 +1,18 @@
+# you can use `read` to get standard input
+read input
+
+((absv = 0))
+for num in ${input}; do
+    absnum=${num//-/}
+    ((absv += absnum))
+    done
+
+echo ${absv}
+
+Sample Input:
+
+2 41 -25
+
+Sample Output:
+
+58

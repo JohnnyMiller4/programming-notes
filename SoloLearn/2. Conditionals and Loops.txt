@@ -1,0 +1,201 @@
+*Conditional statements* are used to perform different actions based on different conditions.
+
+if (condition) {
+	//Executes when the condition is true
+}
+
+< less than
+> greater than
+!= not equal to
+== equal to
+<= less than or equal to
+>= greater than or equal to
+
+An *if* statement can be followed by an optional *else* statement, which executes when the condition evaluates to false.
+
+int age = 30;
+
+if (age < 16) {
+	System.out.println("Too Young");
+} else {
+	System.out.println("Welcome!");
+}
+
+//Outputs "Welcome!"
+
+*Nested if Statements*
+
+You can use one if-else statement inside another if or else statement.
+
+int age = 25;
+
+if(age>0){
+	if(age>16){
+		System.out.println("Welcome!");
+	} else {
+		System.out.println("Too Young");
+	}
+} else {
+	System.out.println("Error");
+}
+//Outputs "Welcome!"
+
+-Instead of using nested if-else statements, you can use the *else if* statement to check multiple conditions.
+
+*Logical Operators* are used to combine multiple conditions.
+
+Nested if statement;
+
+if(age>18){
+	if(money>500){
+		System.out.println("Welcome!");
+	}
+}
+
+//Outputs "Welcome!" if the variable *age* is greater than 18 AND the variable *money* is greater than 500.
+
+OR, you can use the *AND logical operator (&&)*
+
+if (age > 18 && money > 500) {
+	System.out.println("Welcome!");
+}
+
+-If both operands of the AND operator are true, then the condition becomes true
+
+*The OR operator (||)* checks if any of the conditions is true.
+
+int age = 25;
+int money = 100;
+
+if (age > 18 || money > 500) {
+	System.out.println("Welcome!");
+}
+//Outputs "Welcome!" because age (25) is greater than 18, even if money (100) is less than 500
+
+*The switch Statement* tests a variable for equality against a list of values. Each value is called a *case*,
+and the variable being switched on is checked for each case.
+
+switch (expression) {
+	case value1:
+		//statements
+		break; //optional
+	case value2:
+		//statements
+		break; //optional
+	default: //optional
+		//statements
+}
+
+-When the variable being switched on is equal to a *case*, the statements following that case will
+execute until a *break* statement is reached (at which point, the switch terminates).
+
+~*loop Statements*~
+
+-A *loop* statement allows to repeatedly execute a statement or group of statements.
+
+*while Loops* statements repeatedly executes a target statement as long as a given condition is true.
+
+int x = 3;
+
+while(x > 0){
+	System.out.println(x);
+	x--;
+}
+System.out.println("Loop ended");
+
+/*
+OUTPUTS:
+	3
+	2
+	1
+	Loop ended
+*/
+
+*for Loops* allows you to efficiently write a loop that needs
+	to execute a specific number of times.
+
+Syntax:
+for(initialization; condition; increment/decrement{
+	statements(s);
+}
+
+Example:
+for(int x = 1; x<=5; x++){
+	System.out.println(x);
+}
+
+/* Outputs
+1
+2
+3
+4
+5
+*/
+
+~*do... while Loops*~ is similar to a while loop, except that a do...while loop
+	is guaranteed to execute at least one time.
+
+int x = 1;
+
+do {
+	System.out.println(x);
+	x++;
+}while(x<5);
+
+/*
+1
+2
+3
+4
+*/
+
+-Notice that the condition appears at the end of the loop, so the statements in the loop execute
+one before it is tested. Even with a false condition, the code will run once.
+
+int x = 1;
+do {
+	System.out.println(x);
+	x++;
+}while(x<0);
+
+//Outputs: 1
+
+-The *break* and *continue* statements change the loop's execution flow.
+
+-The *break* statement terminates the loop and transfers execution
+to the statement immediately following the loop.
+
+int x = 1;
+
+while(x>0){
+	System.out.println(x);
+	if(x==4){
+		break;
+	}
+	x++;
+}
+
+/* Outputs
+1
+2
+3
+4
+*/
+
+-The *continue* statement causes the loop to skip the remainder of its body
+and then immediately retest its condition prior to reiterating.
+ie, it makes the loop skip to its next iteration.
+
+for(int x=10; x<=40; x=x+10){
+	if(x==30){
+		continue;
+	}
+	System.out.println(x);
+}
+
+/*Outputs
+10
+20 //Skips 30)
+40
+*/
+

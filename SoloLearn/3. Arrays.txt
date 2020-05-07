@@ -1,0 +1,73 @@
+An ~*Array*~ is a collection of variables of the same type.
+
+Syntax:
+int[] arr;
+
+Example:
+int[] arr = new int[5];
+
+int indexPosition = 2;
+arr[indexPosition] = 42;
+
+*Initializing variables*
+
+String[] myNames = {"A", "B", "C", "D"};
+System.out.println(myNames[2]);
+
+//Outputs "C"
+
+-You can access the length of an array (the number of elements it stores) via its *length* property
+
+int[] intArr = new int[5];
+System.out.println(intArr.length);
+
+//Outputs: 5
+
+-The *for* loop is the most used loop when working with arrays.
+
+int [ ] myArr = {6, 42, 3, 7};
+int sum = 0;
+for(int x = 0; x < myArr.length; x++) {
+   sum += myArr[x];
+}
+System.out.println(sum);
+
+//Output: 58
+
+*Enhanced for loop* are used to traverse elements in arrays.
+
+int[] primes = {2, 3, 5, 7};
+
+for (int t: primes) {
+	System.out.println(t);
+}
+
+/*
+2
+3
+5
+7
+*/
+
+
+Syntax:
+
+for (int el : arr) {
+  res += el;
+}
+
+*Multidimensional Arrays* are an array that contains other arrays.
+
+int[][] sample{{1,2,3},{4,5,6}};
+int x = sample[1][0];
+System.out.println(x);
+
+//Outputs: 4
+
+int[ ][ ] myArr = { {1, 2, 3}, {4}, {5, 6, 7} };
+myArr[0][2] = 42;
+int x = myArr[1][0];
+
+//Outputs: 4
+
+int res = 0;

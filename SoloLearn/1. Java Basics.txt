@@ -1,0 +1,102 @@
+Java is used to develop apps for Google's Android OS, Enterprise Applications (ie banking), and more!
+
+class MyClass {
+    public static void main(String[ ] args) {
+        System.out.println("Hello World");
+    }
+}
+
+OUTPUT:
+Hello World
+
+-In Java, every line of code that can actually run needs to be inside a *class (above, it's called MyClass).
+-Each application has an entry point/starting point, which is a method called *main.*
+-*public* and *static* will be explained later (ctrl-f)
+
+~*The main Method*~
+
+public static void main(String[] args)
+
+-public: anyone can access it
+-static: method can be run without creating an instance of the class containing the main method
+-void: method doesn't have a return value
+-main: name of the method
+
+-The method's parameters are delcared inside the parentheses that follow the name of the method.
+	-For main, it's an *array* of strings called *args.*
+
+-Between the curly braces ({}) of the main method is the *body*
+
+{
+	System.out.println("Hello World!");
+}
+
+-The *println* method prints a line of text to the screen.
+-The *System* class and its *out* *stream* are used to access the println method.
+-In Java, each code statement must end with a semicolon (;).
+-(Do NOT use semicolons after method and class declarations that follow with the body defined using the curly braces)
+
+~*Comments*~
+
+//this is a single-line comment
+
+/*This is multi-line
+comment*/
+
+*Documentation Comments* are special comments that have the appearance
+of multi-line comments. They generate external documentation of your source code.
+
+/**This is a documentation comment */
+
+-Use Javadoc to create external documentation.
+
+~*Variables*~ store data for processing
+
+-A variable is given a name (or *identifier*). The name uniquely identifies each variable,
+assigning a value to the variable and retrieving the value stored.
+
+int: for integers (whole numbers) (3)
+double: for floating.point or real numbers with optional decimal points (3.14)
+String: for texts such as "Hello World." Text strings are enclosed within double quotes.
+boolean: a type with only two possible values (true or false).
+
+~*Math Operators*~
+
+An *operand* is a value used on either side of an operator.
+
+int x = 6 + 3;
+
+-The numbers 6 and 3 are *operands* of the plus operator
+
++ addition
+- subtraction
+* multiplication
+/ division
+% modulo (remainder)
+
+i++ *increments* the variable i, and is effectively the same as x=x+1 or ++x.
+i-- *decrements* the variable i, and is effectively the same as x=x-1 or --x.
+
+~*Getting User Input*~
+
+-Import the Scanner class to use the Scanner object;
+
+import java.util.Scanner;
+
+-Then create an *instance* of the class;
+
+Scanner myVar = new Scanner(System.in);
+
+You can now read in different kinds of input data that the user enters.
+Here are some methods that are available through the Scanner class:
+
+Read a byte - nextByte()
+Read a short - nextShort()
+Read an int - nextInt()
+Read a long - nextLong()
+Read a float - nextFloat()
+Read a double - nextDouble()
+Read a boolean - nextBoolean()
+Read a complete line - nextLine()
+Read a word - next()
+
